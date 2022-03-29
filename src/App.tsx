@@ -1,20 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { configApp } from 'app/app.config';
+import { AppRoutes } from 'app/routes/routes';
+import { BrowserRouter } from 'react-router-dom';
+import { Container } from 'typedi';
+import { GlobalStoreProvider, STORES_TOKEN } from 'app/data/local/global-store.service';
 
 function App() {
+  configApp();
+  const globalStores = Container.get(STORES_TOKEN);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <GlobalStoreProvider stores={globalStores}>
+        <AppRoutes />
+      </GlobalStoreProvider>
+    </BrowserRouter>
   );
 }
 
