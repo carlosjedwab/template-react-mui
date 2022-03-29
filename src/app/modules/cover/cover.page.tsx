@@ -1,15 +1,16 @@
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { AppPaths } from 'app/routes/paths';
 
 const CoverPage = () => {
   const navigate = useNavigate();
 
   const handleClickLogin = () => {
-    navigate('/login');
+    navigate(AppPaths.LoginPage.Base);
   };
 
   const handleClickSignup = () => {
-    navigate('/signup');
+    navigate(AppPaths.SignupPage.Base);
   };
 
   return (
