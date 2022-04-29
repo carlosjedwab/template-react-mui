@@ -1,19 +1,11 @@
-import * as React from 'react';
-import { useStore, UserStore } from 'app/data/local';
+import { PageWrapper } from 'app/components/obj.page-wrapper/page-wrapper.component';
+import { Typography } from '@mui/material';
 
 const HomePage = () => {
-  const [, userActions] = useStore(UserStore);
-
-  const handleLogout = () => {
-    userActions?.logout?.();
-  };
-
   return (
-    <div>
-      <h1>Home Page</h1>
-
-      <button onClick={handleLogout}>Logout</button>
-    </div>
+    <PageWrapper>
+      <Typography variant="h3">Home Page</Typography>
+    </PageWrapper>
   );
 };
 

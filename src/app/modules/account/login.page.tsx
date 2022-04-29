@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useStore, UserStore } from 'app/data/local';
+import { Typography } from '@mui/material';
 
 const LoginPage = () => {
   const [, userActions] = useStore(UserStore);
@@ -19,8 +20,8 @@ const LoginPage = () => {
   };
 
   return (
-    <div>
-      <h1>Login Page</h1>
+    <>
+      <Typography variant="h3">Login Page</Typography>
 
       <input
         value={loginFields.email}
@@ -32,7 +33,7 @@ const LoginPage = () => {
       />
 
       <button onClick={handleLogin}>Login</button>
-    </div>
+    </>
   );
 };
 

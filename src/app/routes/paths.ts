@@ -5,4 +5,7 @@ export const AppPaths = {
   SignupPage: {
     Base: '/signup',
   },
+  HomePage: {
+    Base: '/',
+  },
 };

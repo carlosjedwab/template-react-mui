@@ -14,12 +14,13 @@ const MissingRoute = () => {
 
 export const AppRoutes: React.FC = () => {
   const [userState] = useStore(UserStore);
+  const loggedIn = userState.logged ?? false;
 
   return (
     <React.Suspense fallback={<div />}>
       <Routes>
         <Route path={'*'} element={<MissingRoute />} />
-        {!userState.logged ? (
+        {!loggedIn ? (
           <>
             <Route index element={<LandingPage />} />
             <Route path={AppPaths.LoginPage.Base} element={<LoginPage />} />
