@@ -21,8 +21,8 @@ const SignupPage = () => {
         <Typography variant="h3">Signup Page</Typography>
 
         <form onSubmit={signup}>
-          <Column alignItems="center" padding={2} spacing={2}>
-            <Column spacing={2}>
+          <Column alignItems="center" padding="8px" spacing="8px">
+            <Column spacing="8px">
               <TextField
                 label="Name"
                 value={signupData.name}
@@ -41,8 +41,8 @@ const SignupPage = () => {
                 label="Password"
                 value={signupData.password}
                 onChange={(password) => setSignupField('password', password)}
-                type={'text'}
-                hiddenType={'password'}
+                type="text"
+                hiddenType="password"
               />
             </Column>
 

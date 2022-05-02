@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { LoggedInSidebar } from 'app/modules/sidebar';
-import { LoggedOutSidebar } from 'app/modules/sidebar/logged-out-sidebar.component';
+import { LoggedInSidebar, LoggedOutSidebar } from 'app/modules/sidebar';
 import { Column, Row } from '../obj.grid';
 
 export interface PageWrapperProps {

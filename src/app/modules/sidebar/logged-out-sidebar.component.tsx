@@ -25,7 +25,7 @@ export const LoggedOutSidebar = () => {
         <StormIcon sx={{ fontSize: '42px' }} />
       </IconButton>
 
-      <Row spacing={2}>
+      <Row spacing="8px">
         <Button variant="contained" onClick={handleClickLogin}>
           <Typography variant="body1">Login</Typography>
         </Button>

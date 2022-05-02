@@ -21,8 +21,8 @@ const LoginPage = () => {
         <Typography variant="h3">Login Page</Typography>
 
         <form onSubmit={login}>
-          <Column alignItems="center" padding={2} spacing={2}>
-            <Column spacing={2}>
+          <Column alignItems="center" padding="8px" spacing="8px">
+            <Column spacing="8px">
               <TextField
                 label="Email"
                 value={loginData.email}
@@ -34,8 +34,8 @@ const LoginPage = () => {
                 label="Password"
                 value={loginData.password}
                 onChange={(password) => setLoginField('password', password)}
-                type={'text'}
-                hiddenType={'password'}
+                type="text"
+                hiddenType="password"
               />
             </Column>
 
